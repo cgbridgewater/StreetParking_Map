@@ -40,10 +40,10 @@ function Map() {
             center: [lng, lat],
             zoom: zoom,
         });
-        // Create Custom Footer In Map For Techbyte Link
+        // Create Custom Footer In Map For SP Link
         map.current.addControl(
             new mapboxgl.AttributionControl({
-                customAttribution: '<a href="https://techbyte-learning.com/" target="_blank">TechByte Learning</a>',
+                customAttribution: '<a href="https://streetparking.com/" target="_blank">Street Parking</a>',
                 compact: false,
             })
         );
@@ -53,10 +53,10 @@ function Map() {
                 showCompass: true, showZoom: true 
             })
         );
-        // Create A Fly To Animation To TechByte Learning Home From A Randomized Start Point On Map Load And Open Pop Up
+        // Create A Fly To Animation To SPHQ From A Randomized Start Point On Map Load And Open SPHQ Pop Up
         map.current.on('load', () => {
             map.current.easeTo({
-                center: [-76.335820, 40.605510], //Center For Popup to TechByte Address
+                center: [-122.483261, 45.267216], //Center For Popup to SPHQ
                 zoom: 7.5,
                 duration: flyToDuration,
                 curve: 1.42,
@@ -65,7 +65,7 @@ function Map() {
                 },
             });
             setTimeout(() => {
-                HQMarker.click();
+                SPHQMarker.click();
             }, flyToDuration+250);
             // atmosphere styling //
             map.current.setFog({
@@ -76,49 +76,42 @@ function Map() {
                 'star-intensity': 0.7 // Background star brightness (default 0.35 at low zoooms )
             })
         });
-        // HQ Pop Up HTML
-        const HQMarkerInfo =
+        // SPHQ Pop Up HTML
+        const SPHQMarkerInfo =
         `
         <div>
-            <h1>TechByte Learning</h1>
-            <h1></h1>
+            <h1>Street Parking HQ</h1>
             <div>
                 <img src="${KeyLogo}" alt="Team Icon" />
             </div>
             <div>
-                <p><i class="fab fa-linkedin"></i>&nbsp;</p>
-                <a href="https://www.linkedin.com/company/techbyte-learning/" target="_blank" rel="noopener noreferrer">TechByte Learning</a>
+                <p><i class="fab fa-instagram-square"></i>&nbsp;</p>
+                <a href="https://www.instagram.com/streetparking/" target="_blank" rel="noopener noreferrer">StreetParking</a>
             </div>
             <div>
                 <p><i class="fab fa-facebook-square"></i>&nbsp;</p>
-                <a href="https://www.facebook.com/techbytelearning" target="_blank" rel="noopener noreferrer">TechByte Learning</a>
+                <a href="https://www.facebook.com/streetparkingfitness" target="_blank" rel="noopener noreferrer">StreetParkingFitness</a>
             </div>
             <div>
                 <p><i class="fab fa-youtube"></i>&nbsp;</p>
-                <a href="https://www.youtube.com/@BeeDev_TechByte" target="_blank" rel="noopener noreferrer">TechByte Learning</a>
+                <a href="https://www.youtube.com/streetparking" target="_blank" rel="noopener noreferrer">StreetParking</a>
             </div>
             <div>
-                <p><i class="fab fa-twitter-square"></i>&nbsp;</p>
-                <a href="https://www.twitter.com/techByteHive" target="_blank" rel="noopener noreferrer">TechByte Learning</a>
+                <p><i class="fab fa-spotify"></i>&nbsp;</p>
+                <a href="http://open.spotify.com/user/5xm55d6kzn5pwtd3y7qmfjegw?si=7700329fc8e24bf5" target="_blank" rel="noopener noreferrer">Street Parking</a>
             </div>
             <div>
-                <p><i class="fab fa-discord"></i>&nbsp;</p>
-                <a href="https://discord.com/channels/1203563873769365584/1205562887427588116" target="_blank" rel="noopener noreferrer">TechByte Learning</a>
-            </div>
-            <div>
-                <svg width="30" height="30" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.58 13.38a.66.66 0 0 0-.28-.14c-.6.61-1.35 1.25-2 1.68-.31.2-.7.3-.95.3-.59 0-.84-.55-.91-1.44a54.8 54.8 0 0 1-.17-4.83c0-2.26-.52-3.8-1.88-3.92l-.18-.01c-.83 0-1.24.43-1.77 1.52-.46.94-1.17 2.3-2.48 4.9a34.72 34.72 0 0 1-3.5 5.58c-.31.38-.55.64-.78.8a.8.8 0 0 1-.44.14c-.43 0-.75-.36-.85-1.21a5.46 5.46 0 0 1-.04-.69c0-1.75.66-4.6 1.8-8.78.83-3.05.48-5.13-1.34-5.13h-.03c-.41 0-.75.16-1.08.42-.33.25-.65.81-.96 1.56-.34.84-2.42 5.03-5.74 7.2-.04.81.42 1.63 1.37 1.73.85.08 1.46-.28 2.24-.81l-.16.73a31.56 31.56 0 0 0-.5 2.6c-.46 4.2 1.47 6.27 3.74 6.27.38 0 .76-.05 1.13-.15 2.5-.63 4.9-3.51 7.75-10.13a18.8 18.8 0 0 0-.01 2.02c.19 3.8 1.68 4.93 3.8 4.93 1.6 0 3.09-.83 3.85-1.87a3.7 3.7 0 0 0 .79-2.19c-.02-.49-.17-.88-.42-1.08z"></path>
-                </svg>
-                <a href="https://discord.com/channels/1203563873769365584/1205562887427588116" target="_blank" rel="noopener noreferrer">TechByte Learning</a>
+                <p><i class="fas fa-podcast"></i>&nbsp;</p>
+                <a href="https://open.spotify.com/show/1pFbX5YlC9zovLjp5XyImk?si=D0EmQRNSQAKLbdyDo4hnPg" target="_blank" rel="noopener noreferrer">Street Parking Podcast</a>
             </div>
         </div>
         `
         // CREATE SPHQ MARKER 
-        const HQMarker = document.createElement('div');
-        HQMarker.className = "Marker HQ";
-        new mapboxgl.Marker(HQMarker)
-            .setLngLat([-76.435820, 41.005510])
-            .setPopup(new mapboxgl.Popup().setHTML(HQMarkerInfo))
+        const SPHQMarker = document.createElement('div');
+        SPHQMarker.className = "Marker HQ";
+        new mapboxgl.Marker(SPHQMarker)
+            .setLngLat([-122.483261, 45.614846])
+            .setPopup(new mapboxgl.Popup().setHTML(SPHQMarkerInfo))
             .addTo(map.current);
         }, []);
 

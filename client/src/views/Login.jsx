@@ -66,7 +66,7 @@ function Login (props) {
                             </div>
                             :
                             <div className='InputContainer'>
-                                <label htmlFor="email">< i className="fas fa-envelope fa-sm"></i>&nbsp; Email:</label>
+                                <label htmlFor="email">< i className="fas fa-envelope fa-sm" style={{color: "#C89211"}}></i>&nbsp; Email:</label>
                                 <input 
                                     type="text" 
                                     name="email" 
@@ -92,7 +92,7 @@ function Login (props) {
                             </div>
                             :
                             <div className='InputContainer'>
-                                <label htmlFor="password">< i className="fas fa-key fa-sm"></i>&nbsp; Password:</label>
+                                <label htmlFor="password">< i className="fas fa-key fa-sm" style={{color: "#C89211"}}></i>&nbsp; Password:</label>
                                 <input 
                                     type="password" 
                                     name="password" 

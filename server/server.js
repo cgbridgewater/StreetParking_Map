@@ -15,5 +15,5 @@ require('./config/mongoose.config.js');
 require('./routes/user.routes')(app);
 
 app.listen(PORT,() => {
-    console.log(`TechByte Learning Session begins at: Port ${PORT}!`)
+    console.log(`Charging up the Swaggin Wagon on Port: ${PORT}!`)
 });

@@ -76,7 +76,7 @@ function Register (props) {
                         </div>
                     :
                         <div className='InputContainer'>
-                            <label htmlFor="userName">< i className="fas fa-user fa-sm"></i>&nbsp; Name:</label>
+                            <label htmlFor="userName">< i className="fas fa-user fa-sm" style={{color: "#C89211"}}></i>&nbsp; Name:</label>
                             <input 
                                 type="text" 
                                 name="userName" 
@@ -100,7 +100,7 @@ function Register (props) {
                         </div>
                     :
                         <div className='InputContainer'>
-                            <label htmlFor="email">< i className="fas fa-envelope fa-sm"></i>&nbsp; Email:</label>
+                            <label htmlFor="email">< i className="fas fa-envelope fa-sm" style={{color: "#C89211"}}></i>&nbsp; Email:</label>
                             <input 
                                 type="email" 
                                 name="email" 
@@ -122,7 +122,7 @@ function Register (props) {
                         </div>
                     :
                     <div className='InputContainer'>
-                            <label htmlFor="myAutocomplete">< i className="fas fa-map-marked-alt fa-sm"></i>&nbsp;  Address:</label>
+                            <label htmlFor="myAutocomplete">< i className="fas fa-map-marked-alt fa-sm" style={{color: "#C89211"}}></i>&nbsp;  Address:</label>
                             <Autocomplete 
                                 setAddressLine1={setAddressLine1} 
                                 setAddressLine2={setAddressLine2} 
@@ -132,7 +132,7 @@ function Register (props) {
                     }
                     {/* JVM TEAM SELECT */}
                     <div className='InputContainer'>
-                        <label htmlFor="JVM">< i className="fas fa-user-friends fa-sm"></i>&nbsp; JVM:</label>
+                        <label htmlFor="JVM">< i className="fas fa-user-friends fa-sm" style={{color: "#C89211"}}></i>&nbsp; JVM:</label>
                         <select 
                             type="text" 
                             name="JVM" 
@@ -161,7 +161,7 @@ function Register (props) {
                         </div>
                     :
                         <div className='InputContainer'>
-                            <label htmlFor="password">< i className="fas fa-key fa-sm"></i>&nbsp;  Password:</label>
+                            <label htmlFor="password">< i className="fas fa-key fa-sm" style={{color: "#C89211"}}></i>&nbsp;  Password:</label>
                             <input 
                                 type="password" 
                                 name='password' 
@@ -185,7 +185,7 @@ function Register (props) {
                         </div>
                     :
                         <div className='InputContainer'>
-                            <label htmlFor="password">< i className="fas fa-key fa-sm"></i>&nbsp; Confirm <br /> &nbsp;&nbsp;&nbsp;&nbsp;Password:</label>
+                            <label htmlFor="password">< i className="fas fa-key fa-sm" style={{color: "#C89211"}}></i>&nbsp; Confirm <br /> &nbsp;&nbsp;&nbsp;&nbsp;Password:</label>
                             <input 
                                 type="password" 
                                 name='confirmPassword' 

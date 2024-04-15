@@ -9,10 +9,6 @@ function DisclaimerAddress() {
                 The more detailed address you provide, 
                 <br />
                 The more accurate it will be.
-                <br />
-                If you want your location to be unknown,
-                <br />
-                It's recommended to just use your city name.
             </p>
         </>
     )

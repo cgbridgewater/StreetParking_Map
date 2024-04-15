@@ -99,7 +99,7 @@ function Profile(props) {
                                 <Link to="/profile/updateaddress" className="ProfileUpdate">Update Location</Link>
                             </div>
                             {/* ADDRESS DISPLAY */}
-                            <h4 className="ProfileTitle">< i className="fas fa-map-marked-alt fa-sm"></i>&nbsp; Address:</h4> 
+                            <h4 className="ProfileTitle">< i className="fas fa-map-marked-alt fa-sm" style={{color: "#C89211"}}></i>&nbsp; Address:</h4> 
                             <h4 className="ProfileText">{addressLine1}</h4>
                             <h4 className="ProfileText">{addressLine2}</h4>
                         </div>
@@ -112,12 +112,12 @@ function Profile(props) {
                                 <Link to="/profile/updatesocials" className="ProfileUpdate">Update Socials</Link>
                             </div>
                             {/* EMAIL DISPALY */}
-                            <h4 className="ProfileTitle">< i className="fas fa-envelope fa-sm"></i>&nbsp; Email:</h4>
+                            <h4 className="ProfileTitle">< i className="fas fa-envelope fa-sm" style={{color: "#C89211"}}></i>&nbsp; Email:</h4>
                             <h4 className="ProfileText">{email} </h4>
                             {/* GOLD LINE */}
                             <hr className="SeperationLine" />
                             {/* JVM DISPLAY */}
-                            <h4 className="ProfileTitle">< i className="fas fa-user-friends fa-sm"></i>&nbsp; JVM Team:</h4>
+                            <h4 className="ProfileTitle">< i className="fas fa-user-friends fa-sm" style={{color: "#C89211"}}></i>&nbsp; JVM Team:</h4>
                             { !JVM ?
                                 <h4 className="ProfileText">Not Provided</h4>
                             :
@@ -126,29 +126,29 @@ function Profile(props) {
                             {/* GOLD LINE */}
                             <hr className="SeperationLine" />
                             {/* INSTAGRAM DISPLAY */}
-                            <h4 className="ProfileTitle">< i className="fab fa-instagram-square fa-sm"></i>&nbsp; Instagram:</h4>
+                            <h4 className="ProfileTitle">< i className="fab fa-instagram-square fa-sm" style={{color: "#C89211"}}></i>&nbsp; Instagram:</h4>
                             { !instagram ?
                                 <h4 className="ProfileText">Not Provided</h4>
                             :
-                                <h4 className="ProfileText">{instagram}</h4>
+                                <h4 className="ProfileText"><a className="ProfileText" href={`https://www.instagram.com/${instagram}`} target="_blank" rel="noopener noreferrer">{instagram}</a></h4>
                             }
                             {/* GOLD LINE */}
                             <hr className="SeperationLine" />
                             {/* FACEBOOK DISPLAY */}
-                            <h4 className="ProfileTitle">< i className="fab fa-facebook-square fa-sm"></i>&nbsp; Facebook:</h4>
+                            <h4 className="ProfileTitle">< i className="fab fa-facebook-square fa-sm" style={{color: "#C89211"}}></i>&nbsp; Facebook:</h4>
                             { !facebook ?
                                 <h4 className="ProfileText">Not Provided</h4>
                             :
-                                <h4 className="ProfileText">{facebook}</h4>
+                                <h4 className="ProfileText"><a className="ProfileText" href={`https://www.facebook.com/${facebook}`} target="_blank" rel="noopener noreferrer">{facebook}</a></h4>
                             }
                             {/* GOLD LINE */}
                             <hr className="SeperationLine" />
                             {/* SPOTIFY DISPLAY */}
-                            <h4 className="ProfileTitle">< i className="fab fa-spotify fa-sm"></i>&nbsp; Spotify:</h4>
+                            <h4 className="ProfileTitle">< i className="fab fa-spotify fa-sm" style={{color: "#C89211"}}></i>&nbsp; Spotify:</h4>
                             { !spotify ?
                                 <h4 className="ProfileText">Not Provided</h4>
                             :
-                                <h4 className="ProfileText">{spotify}</h4>
+                                <h4 className="ProfileText"><a className="ProfileText" href={`http://open.spotify.com/user/${spotify}`} target="_blank" rel="noopener noreferrer">{spotify}</a></h4>
                             }
                         </div>
                         {/* END SOCIALS INFO SECTION */}
