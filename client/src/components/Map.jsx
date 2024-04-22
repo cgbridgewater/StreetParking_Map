@@ -25,6 +25,7 @@ function Map() {
         axios.get("http://localhost:8000/api/allusers")
             .then((res) => {
                 setUser(res.data);
+                console.log(res.data, "User data")
             })
             .catch((err) => {
                 console.log("Something went wrong when gathering pins!");
